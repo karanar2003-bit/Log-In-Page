@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section>
+    <div class="form-box">
+      <form onsubmit="return validateForm()">
+        <h1>Login</h1>
+
+        <!-- Email Input -->
+        <div class="inputbox">
+          <ion-icon name="mail-outline"></ion-icon>
+          <input type="email" id="email" required>
+          <label>Email</label>
+        </div>
+
+        <!-- Password Input -->
+        <div class="inputbox">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input type="password" id="password" required>
+          <label>Password</label>
+          <span class="toggle-password" onclick="togglePassword()">👁</span>
+        </div>
+
+        <!-- Remember + Forget -->
+        <div class="forget">
+          <label><input type="checkbox"> Remember Me</label>
+          <a href="#" onclick="forgotPassword()">Forget Password?</a>
+        </div>
+
+        <!-- Login Button -->
+        <button type="submit">Log In</button>
+
+        <!-- Register -->
+        <div class="register">
+          <p>Don't have an account? <a href="#" onclick="registerUser()">Register</a></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
